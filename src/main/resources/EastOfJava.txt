@@ -1,0 +1,3 @@
+Schließen von Ressourcen
+ohne den Finally-Block nutzen zu müssen.
+Wichtig: Interface Closable!
