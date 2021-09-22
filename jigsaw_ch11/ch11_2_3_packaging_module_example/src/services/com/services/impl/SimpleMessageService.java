@@ -4,15 +4,13 @@ import com.services.api.MessageService;
 
 /**
  * Beispielprogramm für das Buch "Java 9 -- Die Neuerungen"
- * 
+ *
  * @author Michael Inden
- * 
- * Copyright 2017 by Michael Inden 
+ * <p>
+ * Copyright 2017 by Michael Inden
  */
-public class SimpleMessageService implements MessageService 
-{
-	public String generateMessage() 
-	{
-		return "Message from module services!"; 
-	}
+public class SimpleMessageService implements MessageService {
+    public String generateMessage() {
+        return "Message from module services!";
+    }
 }
