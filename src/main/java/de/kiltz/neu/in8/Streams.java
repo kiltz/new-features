@@ -1,11 +1,9 @@
 package de.kiltz.neu.in8;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -24,18 +22,18 @@ public class Streams {
 
     private static void matchenUndFinden() {
         boolean alleStartenMitM = TAGE.stream().allMatch(s -> s.startsWith("M"));
-        System.out.println("Match 1: "+ alleStartenMitM);
+        System.out.println("Match 1: " + alleStartenMitM);
         boolean wenigstensEinerStartenMitM = TAGE.stream().anyMatch(s -> s.startsWith("M"));
-        System.out.println("Match 2: "+ wenigstensEinerStartenMitM);
+        System.out.println("Match 2: " + wenigstensEinerStartenMitM);
         boolean kinerStartetMitM = TAGE.stream().noneMatch(s -> s.startsWith("M"));
-        System.out.println("Match 3: "+ kinerStartetMitM);
+        System.out.println("Match 3: " + kinerStartetMitM);
 
         Optional<String> erstesD = TAGE.stream().filter(s -> s.startsWith("D")).findFirst();
-        System.out.println("Find 1: "+ erstesD.orElse("Kein D"));
+        System.out.println("Find 1: " + erstesD.orElse("Kein D"));
         Optional<String> erstesZ = TAGE.stream().filter(s -> s.startsWith("Z")).findFirst();
-        System.out.println("Find 2: "+ erstesZ.orElse("Kein Z"));
+        System.out.println("Find 2: " + erstesZ.orElse("Kein Z"));
         Optional<String> irgendEinD = TAGE.stream().filter(s -> s.startsWith("D")).findAny();
-        System.out.println("Find 3: "+ irgendEinD.orElse("Kein D"));
+        System.out.println("Find 3: " + irgendEinD.orElse("Kein D"));
 
 
     }
@@ -56,7 +54,7 @@ public class Streams {
         TAGE.stream().map(erstenZweiBuchstaben).forEach(System.out::println);
 
         System.out.println("Mappen 2");
-        List<Integer> laengen = TAGE.stream().map(s -> s.length()).collect(Collectors.toList());
+        List<Integer> laengen = TAGE.stream().map(String::length).collect(Collectors.toList());
         laengen.forEach(System.out::println);
 
     }
