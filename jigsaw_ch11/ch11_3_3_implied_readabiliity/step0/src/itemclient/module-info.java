@@ -1,0 +1,4 @@
+module itemclient
+{
+    requires itemfactory;
+}

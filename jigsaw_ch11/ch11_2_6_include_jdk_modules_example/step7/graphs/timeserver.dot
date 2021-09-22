@@ -1,0 +1,6 @@
+digraph "timeserver" {
+    // Path: /Users/michaeli/Desktop/Java-Aktuell-JDK9-14-FINAL/quelltext/jigsaw_ch11/ch11_2_6_include_jdk_modules_example/step7/build/timeserver
+   "com.server"                                       -> "java.lang (java.base)";
+   "com.server"                                       -> "java.time (java.base)";
+   "com.server"                                       -> "java.util.logging (java.logging)";
+}

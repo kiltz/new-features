@@ -1,0 +1,4 @@
+module timeclient
+{
+    requires timeserver;
+}

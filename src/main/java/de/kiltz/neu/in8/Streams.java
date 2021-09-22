@@ -4,20 +4,55 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.*;
 
 public class Streams {
     private static final List<String> TAGE = Arrays.asList("Montag", "Dienstag", "Mittwoch",
             "Donnerstag", "Freitag", "Samstag", "Sonntag");
 
     public static void main(String[] args) {
-        einstieg();
-        filtern();
-        mappen();
-        sortieren();
-        matchenUndFinden();
+//        einstieg();
+//        intStreams();
+//        filtern();
+//        mappen();
+//        sortieren();
+//        matchenUndFinden();
+        sammeln();
 
+    }
+
+    private static void sammeln() {
+        final Map<String, Collector<Integer, ?, ?>> collectorsMap = new
+                HashMap<>();
+        collectorsMap.put("counting(): ", counting());
+        collectorsMap.put("summingInt(): ", summingInt(x -> x));
+        collectorsMap.put("averagingInt(): ", averagingInt(x -> x));
+        collectorsMap.put("maxBy(): ", maxBy(Integer::compare));
+        collectorsMap.put("minBy(): ", minBy(Integer::compare));
+        collectorsMap.put("summarizingInt(): ", summarizingInt(x -> x));
+        for (final Map.Entry<String, Collector<Integer, ?, ?>> mapping :
+                collectorsMap.entrySet()) {
+            final Collector<Integer, ?, ?> collector = mapping.getValue();
+            final List<Integer> ints = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+            System.out.println(mapping.getKey() +
+                    ints.stream().collect(collector));
+        }
+
+    }
+
+    private static void intStreams() {
+        final List<String> names = Arrays.asList("Mike", "Stefan", "Nikolaos");
+        Stream<String> values = names.stream(). // --> Stream<String>
+                mapToInt(String::length). // --> Stream
+                asLongStream(). // --> LongStream
+                boxed(). // --> Stream<Long>
+                mapToDouble(x -> x * .75).// --> doubleStream
+                mapToObj(val -> "Val: " + val); // --> Stream<String>
+        values.forEach(System.out::println);
     }
 
     private static void matchenUndFinden() {
@@ -57,6 +92,19 @@ public class Streams {
         List<Integer> laengen = TAGE.stream().map(String::length).collect(Collectors.toList());
         laengen.forEach(System.out::println);
 
+        System.out.println("Mappen 3");
+        final List<Person> persons = new ArrayList<>();
+        persons.add(new Person("Barbara", 40, Gender.FEMALE));
+        persons.add(new Person("Yannis", 5, "Hamburg"));
+// Mapping auf Name mit Lambda
+        final Stream<Person> adults = persons.stream().filter(Person::isAdult);
+        final Stream<String> namesStream = adults.map(Person::getName);
+// Mapping auf Alter mit Methodenreferenz
+        final Stream<Integer> agesStream = persons.stream().map(Person::getAge).
+                filter(age -> age >= 18);
+        namesStream.forEach(System.out::println);
+        agesStream.forEach(System.out::println);
+
     }
 
     private static void filtern() {
@@ -68,7 +116,14 @@ public class Streams {
         System.out.println("Filter 3");
         TAGE.stream().filter(beginntMitM).filter(tag -> tag.contains("o")).forEach(System.out::println);
 
-
+        final List<Person> persons = new ArrayList<>();
+        persons.add(new Person("Micha", 43, "Zürich"));
+        persons.add(new Person("Barbara", 40, Gender.FEMALE));
+        persons.add(new Person("Yannis", 5, "Hamburg"));
+        // final Predicate<Person> isAdult = person --> person.getAge() >= 18;
+        final Stream<Person> adults = persons.stream().filter(Person::isAdult);
+        System.out.println("Filter 4");
+        adults.forEach(System.out::println);
     }
 
     private static void einstieg() {

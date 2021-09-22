@@ -1,0 +1,166 @@
+
+
+// -------------
+// CH 2
+// -------------
+
+// -
+
+
+// -------------
+// CH 3
+// -------------
+
+task PidExample								(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_1.processapi.PidExample") } }
+task ProcessHandleExample					(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_1.processapi.ProcessHandleExample") } }
+task AllProcessHandlesExample				(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_1.processapi.AllProcessHandlesExample") } }
+task ControlProcessExample					(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_1.processapi.ControlProcessExample") } }
+// -------------
+task CollectionFactoryMethodsExample		(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_2.collectionfactorymethods.CollectionFactoryMethodsExample") } }
+task CollectionLiteralsDifferencesExample	(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_2.collectionfactorymethods.CollectionLiteralsDifferencesExample") } }
+task CollectionLiteralsDupolicatesExample	(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_2.collectionfactorymethods.CollectionLiteralsDupolicatesExample") } }
+// -------------
+task WordFinderClient						(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_3.reactivestreams.WordFinderClient") } }
+task WordFinderTwoSubscribersExample		(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_3.reactivestreams.WordFinderTwoSubscribersExample") } }
+// -------------
+task InputStreamJdk8Example					(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_4.inputstream.InputStreamJdk8Example") } }
+task InputStreamJdk9Example					(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_4.inputstream.InputStreamJdk9Example") } }
+// -------------
+task FirstOptionalExample					(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_5.optional.FirstOptionalExample") } }
+task SecondOptionalExample					(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_5.optional.SecondOptionalExample") } }
+task ThirdOptionalExample					(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_5.optional.ThirdOptionalExample") } }
+task OptionalIfPresentOrElseExample			(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_5.optional.OptionalIfPresentOrElseExample") } }
+task OptionalStreamExample					(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_5.optional.OptionalStreamExample") } }
+task OptionalOrExample						(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_5.optional.OptionalOrExample") } }
+// -------------
+task StreamsDropAndTakeWhileExample			(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_6.streams.StreamsDropAndTakeWhileExample") } }
+task DropAndTakeWhileCombinationExample		(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_6.streams.DropAndTakeWhileCombinationExample") } }
+task StreamsIterateExample					(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_6.streams.StreamsIterateExample") } }
+// -------------
+// Kollektoren
+// -------------
+task DatesUntilExample						(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_8.dateandtime.DatesUntilExample") } }
+task LocalDateConversionExample				(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_8.dateandtime.LocalDateConversionExample") } }
+task DurationJdk9Example					(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_8.dateandtime.DurationJdk9Example") } }
+// -------------
+task ArraysExample							(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_9.arrays.ArraysExample") } }
+// -------------
+task ObjectsNonNullExample					(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_10.objects.ObjectsNonNullExample") } }
+// -------------
+task CompletableFutureExample				(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_11.completablefuture.CompletableFutureExample") } }
+task CompletableFutureJdk9Example			(dependsOn: jar, group: 'Java-9--14_Chapter_3_1') { doLast { executeClass("ch3_1_11.completablefuture.CompletableFutureJdk9Example") } }
+
+
+
+// -------------
+// CH 4 Java 10
+// -------------
+
+// -/- Java 10 derzeit keine EXEs
+
+
+
+// -------------
+// CH 5 Java 11
+// -------------
+
+task UrlInputStreamExample					(dependsOn: jar, group: 'Java-9--14_Chapter_5') { doLast { executeClass("ch5_java11.http2.UrlInputStreamExample") } }
+task URLConnectionReaderExample				(dependsOn: jar, group: 'Java-9--14_Chapter_5') { doLast { executeClass("ch5_java11.http2.URLConnectionReaderExample") } }
+task URLConnectionReaderExample2			(dependsOn: jar, group: 'Java-9--14_Chapter_5') { doLast { executeClass("ch5_java11.http2.URLConnectionReaderExample2") } }
+task Http2Example							(dependsOn: jar, group: 'Java-9--14_Chapter_5') { doLast { executeClass("ch5_java11.http2.Http2Example") } }
+task Http2BodyHandlerFileDownloadExample	(dependsOn: jar, group: 'Java-9--14_Chapter_5') { doLast { executeClass("ch5_java11.http2.Http2BodyHandlerFileDownloadExample") } }
+task Http2AsyncExample						(dependsOn: jar, group: 'Java-9--14_Chapter_5') { doLast { executeClass("ch5_java11.http2.Http2AsyncExample") } }
+
+
+// -------------
+// CH 6 JVM
+// -------------
+
+task VersionExample							(dependsOn: jar, group: 'Java-9--14_Chapter_6') { doLast { executeClass("ch6_jvm.VersionExample") } }
+
+
+// -------------
+// CH 7 Übungen
+// -------------
+
+// -/-
+
+
+// -------------
+// CH 8 Java 12
+// -------------
+
+// -/- Java 12 derzeit keine EXEs
+
+// -------------
+// CH 9 Java 13 / 14
+// -------------
+
+// -/- Java 13 / 14 derzeit keine EXEs
+
+
+// -------------
+// CH 10 Java 14
+// -------------
+
+
+
+
+// -------------
+// CH 9 Übungen
+// -------------
+
+// -/-
+
+
+// -------------
+// CH 10
+// -------------
+
+// -/-
+
+
+// -------------
+// CH 11
+// -------------
+
+// CH 12_2
+
+task ServiceConsumerExample					(dependsOn: jar, group: 'Java-9--14_Chapter_12_2') { doLast { executeClass("ch12_2_2.client.ServiceConsumerExample") } }
+
+// CH 11_3
+
+task ModuleInspector						(dependsOn: jar, group: 'Java-9--14_Chapter_12_2') { doLast { executeClass("ch12_3_1.ModuleInspector") } }
+task ModuleFinderExample					(dependsOn: jar, group: 'Java-9--14_Chapter_12_2') { doLast { executeClass("ch12_3_1.ModuleFinderExample") } }
+// -------------
+task ModuleForClassFinder					(dependsOn: jar, group: 'Java-9--14_Chapter_12_2') { doLast { executeClass("ch12_3_2.ModuleForClassFinder") } }
+// -------------
+task ReflectionExample						(dependsOn: jar, group: 'Java-9--14_Chapter_12_2') { doLast { executeClass("ch12_3_3.ReflectionExample") } }
+task ReflectionUtilsUsageExample			(dependsOn: jar, group: 'Java-9--14_Chapter_12_2') { doLast { executeClass("ch12_3_3.ReflectionUtilsUsageExample") } }
+
+
+
+// -------------
+// APPENDIX
+// -------------
+
+task InfiniteStreamsExample					(dependsOn: jar, group: 'Java-9--14_Appendix') { doLast { executeClass("appendix.streams.InfiniteStreamsExample") } }
+task FilterExample							(dependsOn: jar, group: 'Java-9--14_Appendix') { doLast { executeClass("appendix.streams.FilterExample") } }
+task AttributeExtractionExample				(dependsOn: jar, group: 'Java-9--14_Appendix') { doLast { executeClass("appendix.streams.AttributeExtractionExample") } }
+task SortedAndDistinctExample				(dependsOn: jar, group: 'Java-9--14_Appendix') { doLast { executeClass("appendix.streams.SortedAndDistinctExample") } }
+task CalculationExample						(dependsOn: jar, group: 'Java-9--14_Appendix') { doLast { executeClass("appendix.streams.CalculationExample") } }
+task ReduceExample							(dependsOn: jar, group: 'Java-9--14_Appendix') { doLast { executeClass("appendix.streams.ReduceExample") } }
+task CollectorsSpecialExample				(dependsOn: jar, group: 'Java-9--14_Appendix') { doLast { executeClass("appendix.streams.CollectorsSpecialExample") } }
+
+task InstantExample							(dependsOn: jar, group: 'Java-9--14_Appendix') { doLast { executeClass("appendix.dateandtime.InstantExample") } }
+task DurationExample						(dependsOn: jar, group: 'Java-9--14_Appendix') { doLast { executeClass("appendix.dateandtime.DurationExample") } }
+task LocalDateAndTimeExample				(dependsOn: jar, group: 'Java-9--14_Appendix') { doLast { executeClass("appendix.dateandtime.LocalDateAndTimeExample") } }
+task PeriodExample							(dependsOn: jar, group: 'Java-9--14_Appendix') { doLast { executeClass("appendix.dateandtime.PeriodExample") } }
+task PeriodCalculationExample				(dependsOn: jar, group: 'Java-9--14_Appendix') { doLast { executeClass("appendix.dateandtime.PeriodCalculationExample") } }
+task PredefinedTemporalAdjustersExample		(dependsOn: jar, group: 'Java-9--14_Appendix') { doLast { executeClass("appendix.dateandtime.PredefinedTemporalAdjustersExample") } }
+
+task OptionalAlternativesExample			(dependsOn: jar, group: 'Java-9--14_Appendix') { doLast { executeClass("appendix.misc.OptionalAlternativesExample") } }
+task FirstCompletableFutureExample			(dependsOn: jar, group: 'Java-9--14_Appendix') { doLast { executeClass("appendix.misc.FirstCompletableFutureExample") } }
+task SecondCompletableFutureExample			(dependsOn: jar, group: 'Java-9--14_Appendix') { doLast { executeClass("appendix.misc.SecondCompletableFutureExample") } }
+
+
