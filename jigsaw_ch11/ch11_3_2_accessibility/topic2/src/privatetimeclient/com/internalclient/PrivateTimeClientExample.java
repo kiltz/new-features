@@ -1,4 +1,4 @@
-package com.client2;
+package com.internalclient;
 
 import java.io.IOException;
 

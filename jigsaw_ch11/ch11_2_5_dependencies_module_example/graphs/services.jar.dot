@@ -1,5 +1,5 @@
 digraph "services" {
-    // Path: /Users/michael.inden/Desktop/JavaBooks/Java-Aktuell-JDK9-10-11-12-Die-Neuerungen/quelltext/jigsaw_ch10/ch10_2_5_dependencies_module_example/lib/services.jar
+    // Path: D:\IdeaProjects\new-features\jigsaw_ch11\ch11_2_5_dependencies_module_example\lib\services.jar
    "com.services.api"                                 -> "com.services.impl (services)";
    "com.services.api"                                 -> "java.lang (java.base)";
    "com.services.impl"                                -> "com.services.api (services)";
