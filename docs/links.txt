@@ -23,3 +23,14 @@ Links
     http://www.mscharhag.com/java/java-8-date-time-api
 * ForEach und eine Map
     https://dzone.com/articles/iterating-java-map-entries
+* var
+    https://www.baeldung.com/java-10-local-variable-type-inference
+
+* Entwicklung von Java
+    https://ondro.inginea.eu/index.php/new-features-in-java-versions-since-java-8/
+    https://advancedweb.hu/a-categorized-list-of-all-java-and-jvm-features-since-jdk-8-to-17/
+    https://www.baeldung.com/java-8-new-features
+    https://www.baeldung.com/new-java-9
+    https://www.baeldung.com/java-10-overview
+    https://www.baeldung.com/java-11-new-features
+    https://www.baeldung.com/java-12-new-features
