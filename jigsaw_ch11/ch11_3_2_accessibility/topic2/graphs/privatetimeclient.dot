@@ -1,7 +1,0 @@
-digraph "privatetimeclient" {
-    // Path: D:\IdeaProjects\new-features\jigsaw_ch11\ch11_3_2_accessibility\topic2\build\privatetimeclient
-   "com.internalclient"                               -> "com.server.internal (timeserver (qualified))";
-   "com.internalclient"                               -> "java.io (java.base)";
-   "com.internalclient"                               -> "java.lang (java.base)";
-   "com.internalclient"                               -> "java.time (java.base)";
-}

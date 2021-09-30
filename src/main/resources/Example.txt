@@ -1,2 +1,0 @@
-Diese Methode ist allerdings nicht so eingängig wie die beiden Methoden filter() und map(). Nehmen wir als Beispiel die Situation, dass aus einer Menge von Sätzen das Vorkommen einzelner Wörter ermittelt werden soll. Es sind also mehrere Sätze in einem Stream, die wiederum in die einzelne Wörter zerlegt werden müssen. Daraus erhalten wir Streams in Streams. In diesen muss und die Anzahl der einzelnen Wörter gezählt werden.
-Im folgenden Beispiel sollen Sätze aus einer Datei eingelesen werden und alle Wörter mit drei oder weniger Zeichen sollen nicht gezählt werden.

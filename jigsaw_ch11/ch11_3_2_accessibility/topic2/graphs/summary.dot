@@ -1,8 +1,0 @@
-digraph "summary" {
-  "timeserver"                                       -> "java.base (java.base)";
-  "timeserver"                                       -> "java.logging (java.logging)";
-  "privatetimeclient"                                -> "java.base (java.base)";
-  "privatetimeclient"                                -> "timeserver";
-  "timeclient"                                       -> "java.base (java.base)";
-  "timeclient"                                       -> "timeserver";
-}

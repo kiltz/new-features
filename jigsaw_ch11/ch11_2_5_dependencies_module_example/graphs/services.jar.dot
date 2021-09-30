@@ -1,7 +1,0 @@
-digraph "services" {
-    // Path: D:\IdeaProjects\new-features\jigsaw_ch11\ch11_2_5_dependencies_module_example\lib\services.jar
-   "com.services.api"                                 -> "com.services.impl (services)";
-   "com.services.api"                                 -> "java.lang (java.base)";
-   "com.services.impl"                                -> "com.services.api (services)";
-   "com.services.impl"                                -> "java.lang (java.base)";
-}

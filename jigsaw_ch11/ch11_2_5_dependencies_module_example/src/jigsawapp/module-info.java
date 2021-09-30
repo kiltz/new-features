@@ -1,4 +1,0 @@
-module jigsawapp 
-{
-	requires services;
-}

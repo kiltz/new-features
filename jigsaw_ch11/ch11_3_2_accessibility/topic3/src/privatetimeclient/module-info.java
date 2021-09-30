@@ -1,4 +1,0 @@
-module privatetimeclient
-{
-    requires timeserver;
-}

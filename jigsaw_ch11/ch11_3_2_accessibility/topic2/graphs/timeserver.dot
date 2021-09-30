@@ -1,8 +1,0 @@
-digraph "timeserver" {
-    // Path: D:\IdeaProjects\new-features\jigsaw_ch11\ch11_3_2_accessibility\topic2\build\timeserver
-   "com.server"                                       -> "java.lang (java.base)";
-   "com.server"                                       -> "java.time (java.base)";
-   "com.server"                                       -> "java.util.logging (java.logging)";
-   "com.server.internal"                              -> "java.lang (java.base)";
-   "com.server.internal"                              -> "java.time (java.base)";
-}

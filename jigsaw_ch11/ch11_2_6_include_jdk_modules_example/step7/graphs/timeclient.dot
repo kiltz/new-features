@@ -1,9 +1,0 @@
-digraph "timeclient" {
-    // Path: D:\IdeaProjects\new-features\jigsaw_ch11\ch11_2_6_include_jdk_modules_example\step7\build\timeclient
-   "com.client"                                       -> "com.server (timeserver)";
-   "com.client"                                       -> "java.awt (java.desktop)";
-   "com.client"                                       -> "java.lang (java.base)";
-   "com.client"                                       -> "java.lang.invoke (java.base)";
-   "com.client"                                       -> "java.time (java.base)";
-   "com.client"                                       -> "javax.swing (java.desktop)";
-}

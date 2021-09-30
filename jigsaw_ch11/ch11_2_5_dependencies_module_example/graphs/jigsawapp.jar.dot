@@ -1,7 +1,0 @@
-digraph "jigsawapp" {
-    // Path: D:\IdeaProjects\new-features\jigsaw_ch11\ch11_2_5_dependencies_module_example\lib\jigsawapp.jar
-   "com.inden.javaprofi"                              -> "com.services.api (services)";
-   "com.inden.javaprofi"                              -> "java.io (java.base)";
-   "com.inden.javaprofi"                              -> "java.lang (java.base)";
-   "com.inden.javaprofi"                              -> "java.lang.invoke (java.base)";
-}
