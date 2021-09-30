@@ -1,7 +1,7 @@
-package de.verbund.kunden.gui.model;
+package de.kiltz.kunden.gui.model;
 
-import de.verbund.kunden.gui.controller.NeuController;
-import de.verbund.kunden.gui.view.NeuView;
+import de.kiltz.kunden.gui.controller.NeuController;
+import de.kiltz.kunden.gui.view.NeuView;
 
 /**
  * Das Model

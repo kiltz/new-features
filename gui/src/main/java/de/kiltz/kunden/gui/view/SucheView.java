@@ -1,4 +1,4 @@
-package de.verbund.kunden.gui.view;
+package de.kiltz.kunden.gui.view;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
@@ -19,9 +19,9 @@ import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
-import de.verbund.kunden.gui.controller.SucheController;
-import de.verbund.kunden.gui.model.SucheModel;
-import de.verbund.kunden.gui.utils.GUITools;
+import de.kiltz.kunden.gui.controller.SucheController;
+import de.kiltz.kunden.gui.model.SucheModel;
+import de.kiltz.kunden.gui.utils.GUITools;
 
 public class SucheView {
 

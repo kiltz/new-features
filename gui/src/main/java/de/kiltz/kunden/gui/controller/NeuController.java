@@ -1,11 +1,11 @@
-package de.verbund.kunden.gui.controller;
+package de.kiltz.kunden.gui.controller;
 
-import de.verbund.kunden.KundenBD;
-import de.verbund.kunden.dto.Kunde;
-import de.verbund.kunden.gui.model.NeuModel;
-import de.verbund.kunden.gui.view.HauptFenster;
-import de.verbund.kunden.gui.view.NeuView;
-import de.verbund.kunden.service.PflichtFeldException;
+import de.kiltz.kunden.KundenBD;
+import de.kiltz.kunden.dto.Kunde;
+import de.kiltz.kunden.service.PflichtFeldException;
+import de.kiltz.kunden.gui.model.NeuModel;
+import de.kiltz.kunden.gui.view.HauptFenster;
+import de.kiltz.kunden.gui.view.NeuView;
 
 /**
  * Der Controller als Singleton

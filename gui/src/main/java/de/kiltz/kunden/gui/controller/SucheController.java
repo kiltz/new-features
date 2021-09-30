@@ -1,4 +1,4 @@
-package de.verbund.kunden.gui.controller;
+package de.kiltz.kunden.gui.controller;
 
 import java.util.List;
 import java.util.Observable;
@@ -6,11 +6,11 @@ import java.util.Observer;
 
 import javax.swing.SwingUtilities;
 
-import de.verbund.kunden.KundenBD;
-import de.verbund.kunden.dto.Kunde;
-import de.verbund.kunden.gui.model.SucheModel;
-import de.verbund.kunden.gui.view.HauptFenster;
-import de.verbund.kunden.gui.view.SucheView;
+import de.kiltz.kunden.KundenBD;
+import de.kiltz.kunden.dto.Kunde;
+import de.kiltz.kunden.gui.model.SucheModel;
+import de.kiltz.kunden.gui.view.HauptFenster;
+import de.kiltz.kunden.gui.view.SucheView;
 
 public class SucheController implements Observer {
     private final HauptFenster hauptFenster;

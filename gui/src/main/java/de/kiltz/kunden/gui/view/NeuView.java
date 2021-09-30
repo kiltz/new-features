@@ -1,4 +1,4 @@
-package de.verbund.kunden.gui.view;
+package de.kiltz.kunden.gui.view;
 
 import java.awt.Color;
 import java.awt.GridBagConstraints;
@@ -12,9 +12,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import de.verbund.kunden.gui.controller.NeuController;
-import de.verbund.kunden.gui.model.NeuModel;
-import de.verbund.kunden.gui.utils.GUITools;
+import de.kiltz.kunden.gui.controller.NeuController;
+import de.kiltz.kunden.gui.model.NeuModel;
+import de.kiltz.kunden.gui.utils.GUITools;
 
 public class NeuView {
 

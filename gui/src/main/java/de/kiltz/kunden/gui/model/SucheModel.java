@@ -1,10 +1,10 @@
-package de.verbund.kunden.gui.model;
+package de.kiltz.kunden.gui.model;
 
 import java.util.List;
 
-import de.verbund.kunden.dto.Kunde;
-import de.verbund.kunden.gui.controller.SucheController;
-import de.verbund.kunden.gui.view.SucheView;
+import de.kiltz.kunden.dto.Kunde;
+import de.kiltz.kunden.gui.controller.SucheController;
+import de.kiltz.kunden.gui.view.SucheView;
 
 public class SucheModel {
 

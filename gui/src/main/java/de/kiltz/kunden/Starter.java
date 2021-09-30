@@ -1,8 +1,8 @@
-package de.verbund.kunden;
+package de.kiltz.kunden;
 
 import javax.swing.SwingUtilities;
 
-import de.verbund.kunden.gui.view.HauptFenster;
+import de.kiltz.kunden.gui.view.HauptFenster;
 
 public class Starter {
 

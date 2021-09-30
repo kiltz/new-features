@@ -1,4 +1,4 @@
-package de.verbund.kunden.gui.utils;
+package de.kiltz.kunden.gui.utils;
 
 import java.util.Observable;
 

@@ -1,9 +1,9 @@
-package de.verbund.kunden.service;
+package de.kiltz.kunden.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import de.verbund.kunden.dto.Kunde;
+import de.kiltz.kunden.dto.Kunde;
 
 /**
  * Klasse repräsentiert die BusinessEbene der Applikation.

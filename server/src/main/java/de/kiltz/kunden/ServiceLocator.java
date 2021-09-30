@@ -1,7 +1,7 @@
-package de.verbund.kunden;
+package de.kiltz.kunden;
 
-import de.verbund.kunden.service.KundenVerwaltung;
-import de.verbund.kunden.service.KundenVerwaltungDummyImpl;
+import de.kiltz.kunden.service.KundenVerwaltung;
+import de.kiltz.kunden.service.KundenVerwaltungDummyImpl;
 
 public class ServiceLocator {
 

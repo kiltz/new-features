@@ -1,4 +1,4 @@
-package de.verbund.kunden.gui.view;
+package de.kiltz.kunden.gui.view;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,10 +9,10 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
-import de.verbund.kunden.gui.controller.NeuController;
-import de.verbund.kunden.gui.controller.SucheController;
-import de.verbund.kunden.gui.utils.GUITools;
-import de.verbund.kunden.gui.utils.KundenObservable;
+import de.kiltz.kunden.gui.controller.NeuController;
+import de.kiltz.kunden.gui.controller.SucheController;
+import de.kiltz.kunden.gui.utils.KundenObservable;
+import de.kiltz.kunden.gui.utils.GUITools;
 
 public class HauptFenster {
 
