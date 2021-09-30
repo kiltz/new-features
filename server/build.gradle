@@ -1,0 +1,13 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'eclipse'
+}
+
+sourceCompatibility = 11
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+

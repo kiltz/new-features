@@ -1,0 +1,7 @@
+Aufgabe
+=======
+1. Finde und ersetze Quelltext-Stellen, die durch neue Features ersetzt werden können.
+
+2. Modularisiere das Projekt mit Jigsaw
+
+

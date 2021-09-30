@@ -1,0 +1,9 @@
+
+Observer -> PropertyChangeListener
+
+Anonyme Adapter zu Lambda
+Starte.main -> Lambda
+
+Validierung bei neuerKunde mit Optional
+
+Filtern bei suche(..) mit Stream
