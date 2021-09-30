@@ -1,4 +1,4 @@
-package de.kiltz.kunden.service;
+package de.kiltz.kunden.server;
 
 public class PflichtFeldException extends Exception {
 

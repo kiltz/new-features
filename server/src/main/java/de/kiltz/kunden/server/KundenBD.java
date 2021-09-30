@@ -1,10 +1,9 @@
-package de.kiltz.kunden;
+package de.kiltz.kunden.server;
 
 import java.util.List;
 
-import de.kiltz.kunden.dto.Kunde;
-import de.kiltz.kunden.service.KundenVerwaltung;
-import de.kiltz.kunden.service.PflichtFeldException;
+import de.kiltz.kunden.server.dto.Kunde;
+import de.kiltz.kunden.server.service.KundenVerwaltung;
 
 public class KundenBD {
 

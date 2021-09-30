@@ -6,8 +6,8 @@ import java.util.Observer;
 
 import javax.swing.SwingUtilities;
 
-import de.kiltz.kunden.KundenBD;
-import de.kiltz.kunden.dto.Kunde;
+import de.kiltz.kunden.server.KundenBD;
+import de.kiltz.kunden.server.dto.Kunde;
 import de.kiltz.kunden.gui.model.SucheModel;
 import de.kiltz.kunden.gui.view.HauptFenster;
 import de.kiltz.kunden.gui.view.SucheView;

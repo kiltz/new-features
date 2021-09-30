@@ -1,4 +1,4 @@
-package de.kiltz.kunden.dto;
+package de.kiltz.kunden.server.dto;
 
 /**
  * Data Transfer-Objekt für einen Kunden.

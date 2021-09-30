@@ -1,4 +1,4 @@
-package de.kiltz.kunden;
+package de.kiltz.kunden.gui;
 
 import javax.swing.SwingUtilities;
 

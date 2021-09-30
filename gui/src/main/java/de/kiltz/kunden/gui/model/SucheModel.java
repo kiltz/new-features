@@ -2,7 +2,7 @@ package de.kiltz.kunden.gui.model;
 
 import java.util.List;
 
-import de.kiltz.kunden.dto.Kunde;
+import de.kiltz.kunden.server.dto.Kunde;
 import de.kiltz.kunden.gui.controller.SucheController;
 import de.kiltz.kunden.gui.view.SucheView;
 
