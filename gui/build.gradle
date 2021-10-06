@@ -14,4 +14,16 @@ repositories {
 dependencies {
     compile project(":server")
 }
+/*
+ext.moduleName = 'kv.gui'
 
+compileJava {
+    inputs.property('moduleName', moduleName)
+    doFirst {
+        options.compilerArgs = [
+                '--module-path', classpath.asPath
+        ]
+        classpath = files()
+    }
+}
+*/
