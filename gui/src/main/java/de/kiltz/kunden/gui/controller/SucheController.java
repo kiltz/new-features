@@ -1,22 +1,21 @@
 package de.kiltz.kunden.gui.controller;
 
-import java.util.List;
-import java.util.Observable;
-import java.util.Observer;
-
-import javax.swing.SwingUtilities;
-
-import de.kiltz.kunden.server.KundenBD;
-import de.kiltz.kunden.server.dto.Kunde;
 import de.kiltz.kunden.gui.model.SucheModel;
 import de.kiltz.kunden.gui.view.HauptFenster;
 import de.kiltz.kunden.gui.view.SucheView;
+import de.kiltz.kunden.server.KundenBD;
+import de.kiltz.kunden.server.dto.Kunde;
 
-public class SucheController implements Observer {
+import javax.swing.*;
+import java.beans.PropertyChangeListener;
+import java.util.List;
+
+public class SucheController {
     private final HauptFenster hauptFenster;
     private final SucheModel sucheModel;
     private final SucheView sucheView;
     private final KundenBD bd;
+    private PropertyChangeListener listener;
 
     public SucheController(HauptFenster hauptFenster) {
         this.hauptFenster = hauptFenster;
@@ -24,25 +23,24 @@ public class SucheController implements Observer {
         sucheView = new SucheView(hauptFenster, this, sucheModel);
         sucheModel.setView(sucheView);
         bd = new KundenBD();
+        addPropChange();
+    }
+
+    private void addPropChange() {
+        listener = e -> suche();
+        hauptFenster.addPropertyChangeListener(listener);
     }
 
     public void suche() {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override public void run() {
-                List<Kunde> liste = bd.suche(sucheModel.getSuchbegriff());
-                sucheModel.setListe(liste);
-                sucheView.aktualisiere();
-            }
+        SwingUtilities.invokeLater(() -> {
+            List<Kunde> liste = bd.suche(sucheModel.getSuchbegriff());
+            sucheModel.setListe(liste);
+            sucheView.aktualisiere();
         });
     }
 
-    @Override public void update(Observable o, Object arg) {
-        suche();
-
-    }
-
     public void byeBye() {
-        hauptFenster.removeObserver(this);
+        hauptFenster.removePropertyChangeListener(listener);
 
         System.out.println("nehme mich raus...");
     }

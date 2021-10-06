@@ -1,20 +1,11 @@
 package de.kiltz.kunden.gui.view;
 
-import java.awt.Color;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-
 import de.kiltz.kunden.gui.controller.NeuController;
 import de.kiltz.kunden.gui.model.NeuModel;
 import de.kiltz.kunden.gui.utils.GUITools;
+
+import javax.swing.*;
+import java.awt.*;
 
 public class NeuView {
 
@@ -119,11 +110,7 @@ public class NeuView {
         if (bSpeicher == null) {
             bSpeicher = new JButton();
             bSpeicher.setText("Speichern");
-            bSpeicher.addActionListener(new ActionListener() {
-                @Override public void actionPerformed(ActionEvent e) {
-                    speicher();
-                }
-            });
+            bSpeicher.addActionListener(e -> speicher());
         }
         return bSpeicher;
     }

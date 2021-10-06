@@ -1,7 +1,8 @@
 package de.kiltz.kunden.server.service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 import de.kiltz.kunden.server.PflichtFeldException;
 import de.kiltz.kunden.server.dto.Kunde;
@@ -22,31 +23,31 @@ public class KundenVerwaltungDummyImpl implements KundenVerwaltung {
     }
 
     private void erstelleTestDaten() {
-        liste = new ArrayList<Kunde>();
+        liste = new ArrayList<>();
         liste.add(new Kunde("Hägar", "K00001"));
         liste.add(new Kunde("Sven", "K00002"));
         liste.add(new Kunde("Helga", "K00003"));
-        for (int i = 0; i < liste.size(); i++) {
-            liste.get(i).setId(i + 1L);
-        }
+        final Long[] i = {1L};
+        liste.forEach(k -> k.setId(i[0]++));
     }
 
     @Override public List<Kunde> suche(String s) {
-        List<Kunde> erg = new ArrayList<Kunde>();
-        for (Kunde k : liste) {
-            if (k.getName().toLowerCase().contains(s.toLowerCase())) {
-                erg.add(k);
-            }
-        }
-        return erg;
+        return liste.stream()
+                .filter(k -> k.getName().toLowerCase().contains(s.toLowerCase()))
+                        .collect(Collectors.toList());
     }
 
     @Override public Kunde neuerKunde(Kunde k) throws PflichtFeldException {
-        if (k.getName() == null || k.getName().isEmpty()) {
+        Optional.ofNullable(k.getName())
+                .orElseThrow(() -> new PflichtFeldException("Name ist ein Pflichtfeld!"));
+
+        Predicate<String> isNullOrEmpty = s -> s == null || s.isEmpty();
+        if (isNullOrEmpty.test(k.getName())) {
             throw new PflichtFeldException("Name ist ein Pflichtfeld!");
         }
+
         liste.add(k);
-        k.setId(liste.size() * 1L);
+        k.setId((long) liste.size());
         return k;
     }
 

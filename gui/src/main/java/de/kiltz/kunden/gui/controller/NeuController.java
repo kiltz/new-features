@@ -45,7 +45,7 @@ public class NeuController {
         try {
             k = bd.neuerKunde(k);
             neuView.meldeOk(k.getId());
-            hauptFenster.notifyObservers();
+            hauptFenster.notifyObservers(k);
         } catch (PflichtFeldException e) {
             // Was tun mit der Ex? :(
             neuView.meldeFehler(e.getMessage());

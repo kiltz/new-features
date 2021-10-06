@@ -1,23 +1,18 @@
 package de.kiltz.kunden.gui.view;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.Observer;
-
-import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-
 import de.kiltz.kunden.gui.controller.NeuController;
 import de.kiltz.kunden.gui.controller.SucheController;
-import de.kiltz.kunden.gui.utils.KundenObservable;
 import de.kiltz.kunden.gui.utils.GUITools;
+import de.kiltz.kunden.server.dto.Kunde;
+
+import javax.swing.*;
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
 
 public class HauptFenster {
 
     private JFrame frame;
-    private KundenObservable observer;
+    private final PropertyChangeSupport support = new PropertyChangeSupport(this);
 
     public HauptFenster() {
         init();
@@ -39,32 +34,16 @@ public class HauptFenster {
         JMenu datei = new JMenu("Datei");
         datei.setMnemonic('d');
         JMenuItem ende = new JMenuItem("Beenden");
-        ende.addActionListener(new ActionListener() {
-
-            @Override public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-
-            }
-        });
+        ende.addActionListener(e -> System.exit(0));
         datei.add(ende);
 
         JMenu kunden = new JMenu("Kunden");
         kunden.setMnemonic('k');
         JMenuItem suche = new JMenuItem("Suchen");
-        suche.addActionListener(new ActionListener() {
-
-            @Override public void actionPerformed(ActionEvent e) {
-                zeigSuche();
-            }
-        });
+        suche.addActionListener(e -> zeigSuche());
         kunden.add(suche);
         JMenuItem neu = new JMenuItem("Neu");
-        neu.addActionListener(new ActionListener() {
-
-            @Override public void actionPerformed(ActionEvent e) {
-                zeigNeu();
-            }
-        });
+        neu.addActionListener(e -> zeigNeu());
         kunden.add(neu);
 
         bar.add(datei);
@@ -78,29 +57,21 @@ public class HauptFenster {
     }
 
     protected void zeigSuche() {
-        addObserver(new SucheController(this));
+        new SucheController(this);
 
     }
 
-    private void addObserver(Observer o) {
-        if (observer == null) {
-            observer = new KundenObservable();
-        }
-        observer.addObserver(o);
-
+    public void addPropertyChangeListener(PropertyChangeListener listener) {
+        support.addPropertyChangeListener(listener);
     }
 
-    // TODO
-    public void removeObserver(Observer o) {
-        observer.deleteObserver(o);
-
+    public void removePropertyChangeListener(PropertyChangeListener listener) {
+        support.removePropertyChangeListener(listener);
     }
 
-    public void notifyObservers() {
-        if (observer != null) {
-            observer.setChanged();
-            observer.notifyObservers();
-        }
+    public void notifyObservers(Kunde k) {
+
+        support.firePropertyChange("neuer Kunde", null, k);
     }
 
     public JFrame getFrame() {

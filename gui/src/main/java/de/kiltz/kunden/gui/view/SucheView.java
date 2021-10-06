@@ -1,27 +1,16 @@
 package de.kiltz.kunden.gui.view;
 
-import java.awt.BorderLayout;
-import java.awt.Component;
-import java.awt.Container;
-import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.JTextField;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
-
 import de.kiltz.kunden.gui.controller.SucheController;
 import de.kiltz.kunden.gui.model.SucheModel;
 import de.kiltz.kunden.gui.utils.GUITools;
+
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import java.awt.*;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class SucheView {
 
@@ -90,13 +79,7 @@ public class SucheView {
     public JButton getbSuche() {
         if (bSuche == null) {
             bSuche = new JButton("Suche");
-            bSuche.addActionListener(new ActionListener() {
-
-                @Override public void actionPerformed(ActionEvent e) {
-                    suche();
-
-                }
-            });
+            bSuche.addActionListener(e -> suche());
         }
         return bSuche;
     }
